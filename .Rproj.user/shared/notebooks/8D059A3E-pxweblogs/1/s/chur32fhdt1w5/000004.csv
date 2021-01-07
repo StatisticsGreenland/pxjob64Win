@@ -1,0 +1,30 @@
+"0","for (i in 1:length(filenames)) {
+  statlog_all <- read_log(filenames[i])
+  colnames(statlog_all)<- c(""time"",""X2"",""X3"",""X4"",""X5"",""X6"",""X7"",""context"",""userID"",""language"",
+                            ""database"",""actionType"",""actionName"", ""tableID"", ""numberOfCells"",
+                            ""numberOfContents"")
+  statlog <- rbind(statlog,statlog_all)  
+}
+"
+"2","Parsed with column specification:
+cols(
+  X1 = [34mcol_date(format = """")[39m,
+  X2 = [31mcol_character()[39m,
+  X3 = [32mcol_double()[39m,
+  X4 = [31mcol_character()[39m,
+  X5 = [33mcol_logical()[39m,
+  X6 = [31mcol_character()[39m,
+  X7 = [33mcol_logical()[39m,
+  X8 = [31mcol_character()[39m,
+  X9 = [31mcol_character()[39m,
+  X10 = [31mcol_character()[39m,
+  X11 = [31mcol_character()[39m,
+  X12 = [31mcol_character()[39m,
+  X13 = [31mcol_character()[39m,
+  X14 = [31mcol_character()[39m,
+  X15 = [31mcol_character()[39m,
+  X16 = [31mcol_character()[39m
+)
+"
+"2","Fejl i rbind(statlog, statlog_all) : objekt 'statlog' blev ikke fundet
+"

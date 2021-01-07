@@ -1,0 +1,119 @@
+---
+title: "pxweblogs"
+author: "LarsP"
+date: "3/1/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## PXWeb log-files 
+
+PXWeb does 3 different logfiles:
+
+Stat
+
+PX
+
+API
+
+
+By default the files are found on pxweb\app_data\logfiles, but can be configured to another path by admin.
+
+In this project they are copied to a windows file-system, that can be accessed with R, like;
+
+S:/STATBANK/pxlog/stats_all/
+
+S:/STATBANK/pxlog/px_all/
+
+S:/STATBANK/pxlog/api_all/
+
+
+
+```{r logs}
+
+# Preface ------------------------------------------------------------
+rm(list = ls())
+
+library(tidyverse)
+
+# Path to folder with log files
+filenames = dir(path="C:/Users/Lars_/OneDrive/Dokumenter/Arbejde/R/pxlog/stats_all/",full.names = TRUE)
+
+# Empty initial tibble
+statlog <- tibble(time=character(),
+                context=character(),
+                userID=character(),
+                language=character(),
+                database=character(),
+                actionType=character(),
+                actionName=character(),
+                tableID=character(),
+                numberOfCells=character(),
+                numberOfContents=character())
+
+# Read all files in folder and append to statlog
+for (i in 1:length(filenames)) {
+  statlog_all <- read_log(filenames[i])
+  colnames(statlog_all)<- c("time","X2","X3","X4","X5","X6","X7","context","userID","language",
+                            "database","actionType","actionName", "tableID", "numberOfCells",
+                            "numberOfContents")
+  statlog <- rbind(statlog,statlog_all)  
+}
+
+# Wrangle dataset
+statlog$year <- str_sub(statlog$time,1,4)
+statlog$month <- as.numeric(str_sub(statlog$time,6,7))
+statlog$context <- gsub(".*=","",statlog$context)
+statlog$userID <- gsub(".*=","",statlog$userID)
+statlog$language <- gsub(".*=","",statlog$language)
+statlog$database <- gsub(".*=","",statlog$database)
+statlog$actionType <- gsub(".*=","",statlog$actionType)
+statlog$actionName <- gsub(".*=","",statlog$actionName)
+statlog$tableID <- gsub(".*=","",statlog$tableID)
+statlog$numberOfCells <- gsub(".*=","",statlog$numberOfCells)
+
+statlog$context <- gsub(",","",statlog$context)
+statlog$userID <- gsub(",","",statlog$userID)
+statlog$language <- gsub(",","",statlog$language)
+statlog$database <- gsub(",","",statlog$database)
+statlog$actionType <- gsub(",","",statlog$actionType)
+statlog$actionName <- gsub(",","",statlog$actionName)
+statlog$tableID <- gsub(",","",statlog$tableID)
+statlog$numberOfCells <- gsub(",","",statlog$numberOfCells)
+
+statlog$table_tmp <- gsub(".*[\\]","All/",statlog$tableID)
+statlog$table <- gsub(".*/","",statlog$table_tmp)
+statlog$table <- gsub(".px","",statlog$table)
+statlog$table <- gsub(".PX","",statlog$table)
+statlog$subcode <- str_sub(statlog$table,1,2)
+
+# Create a tidy dataset, sorted, ready for pxjob
+slog <- statlog %>% 
+  filter(database == "Greenland") %>% 
+  select(year,month,subcode,table,language,actionType,actionName,context) %>% 
+  mutate(antal = 1) %>%
+  group_by(year,month,subcode,table,language,actionType,actionName,context) %>%
+    summarise(value = sum(antal)) %>%
+  ungroup() %>% 
+  arrange(year,month,subcode,table,language,actionType,actionName,context) 
+
+# slog_short <- statlog %>% 
+#   filter(database == "Greenland") %>% 
+#   select(year,month,subcode,language,actionType,actionName,context) %>% 
+#   mutate(antal = 1) %>%
+#   group_by(year,month,subcode,language,actionType,actionName,context) %>%
+#   summarise(value = sum(antal)) %>%
+#   ungroup() %>% 
+#   arrange(year,month,subcode,language,actionType,actionName,context) 
+
+
+
+```
+
+## PXWeb log-files 
+
+Creates a PX-file from log files found
+in the folder C:\Users\Lars_\OneDrive\Dokumenter\Arbejde\R\pxlog\stats

@@ -1,0 +1,152 @@
+
+
+
+# Setup environment
+
+# To empty environment - remove hash-tag
+# rm(list = ls())
+
+setwd("C:/Users/Lars_/OneDrive/Dokumenter/Arbejde/R/SF")
+
+# Setup R
+
+# NOT needed in this example, as it is based on saved queries, read as .relational_table
+#library("statgl") # Info at www.stat.gl/SBE202003/o1
+#install.packages("devtools")
+library(devtools)
+#devtools::install_github("StatisticsGreenland/statgl")
+devtools::install_github("LarsLap/pxjob64Win")
+
+library(DoPxR)
+
+
+if(!require("tidyverse")) {install.packages("tidyverse")}
+library(tidyverse)
+
+
+# Get data From Statistics Finland (2 saved queries)
+
+# Live born children
+SF_CITI02 <- as_tibble(read_delim(
+    "http://pxnet2.stat.fi/PXWeb/sq/1b0f60cd-ca42-46fa-a58e-34ae9b7a5e98.relational_table",
+    locale = locale(encoding = "latin1"),
+    delim = "\t" ) ) %>%
+  rename(Age = `Age of mother`) %>%
+  filter(Age > 14) %>%
+  filter(Age < 50) %>%
+  select(-Information)
+
+#Female population
+SF_POP <- as_tibble(read_delim(
+  "http://pxnet2.stat.fi/PXWeb/sq/e2927ff7-da05-4ed4-806f-93deb6f7ee84.relational_table",
+  locale = locale(encoding = "latin1"),
+  delim = "\t" ) ) %>%
+  filter(Year > 1988) %>%
+  select(-Sex, -Information) %>%
+  mutate(Age = as.character(Age)) %>%
+  mutate(MeanPop = (`Population 31.12.` + lead(`Population 31.12.`,1))/2) %>%
+  mutate(Year = Year+1) %>%
+  select(-`Population 31.12.`)
+
+# Calculate agespecific fertility
+SF_TF <- left_join(SF_CITI02,SF_POP, by = NULL, copy = FALSE) %>%
+  mutate(AFR = (`Live births`/ MeanPop) * 1000 ) %>%
+  select(-`Live births`,-MeanPop)
+
+# Aggregate to total fertility
+SF_TF_Total <- SF_TF%>%
+  group_by(Year) %>%
+    summarise(AFR = sum(AFR)) %>%
+  ungroup() %>%
+  mutate(Age = c("-1"))
+
+
+# Put together in one file
+TF <- full_join(SF_TF,SF_TF_Total,by=c("Year"="Year","Age"="Age","AFR"="AFR"),keep = F) %>%
+  arrange(Year, Age, AFR) %>%
+  mutate(AFR = sprintf("%0.2f", AFR)) %>%
+  mutate(Age = str_replace(Age, "-1", "Total fertility"))
+
+
+# clean up
+#rm(SF_CITI02,SF_POP,SF_TF,SF_TF_Total)
+
+
+# Do_Px
+matrix="TEST"
+
+#1 Write data to csv file
+  write.table_with_header(TF,"output_tmp.csv",c("Total Fertility;en,da"),sep=';')
+  write_lines("","output_tmp.csv", append = TRUE)
+  write_lines("","output_tmp.csv", append = TRUE)
+  write_lines("languagecode;en;da","output_tmp.csv", append = TRUE)
+  write_lines("VARIABLES;Year,Age;tid,alder","output_tmp.csv", append = TRUE)
+  write_lines("CONTENTS;Agespecific fertility;Aldersbetinget fertilitet","output_tmp.csv", append = TRUE)
+
+# convert to px
+  pxjob("output_tmp.csv",paste(matrix,".px",sep=""))
+  if (file.exists("output_tmp.csv")) {file.remove("output_tmp.csv")}
+
+
+# manipulate and add metadata
+# Pivot
+  # Do control file
+    writeLines("STUB;HEADING","control.csv")
+    write_lines("Age;Year","control.csv", append = TRUE)
+
+    pxjob_add(paste(matrix,".px",sep=""),"control.csv")
+
+  #Delete file if it exists
+    if (file.exists("control.csv")) {file.remove("control.csv")}
+# END Pivot
+
+# Matrix, Subject-code
+  # Do control file
+    writeLines("MATRIX;SUBJECT-CODE","control.csv")
+    write_lines(matrix,"control.csv", append = TRUE)
+    write_lines(";PO;","control.csv", append = TRUE)
+
+    pxjob_add(paste(matrix,".px",sep=""),"control.csv")
+
+  #Delete file if it exists
+    if (file.exists("control.csv")) {file.remove("control.csv")}
+# END Matrix
+
+# Subject-area, units
+    # Do control file
+    writeLines("SUBJECT-AREA;UNITS;languagecode","control.csv")
+    write_lines("Population;;en","control.csv", append = TRUE)
+    write_lines("Befolkning;;da","control.csv", append = TRUE)
+    write_lines(";fertilityrate;en","control.csv", append = TRUE)
+    write_lines(";fertilitetskvotient;da","control.csv", append = TRUE)
+
+    pxjob_add(paste(matrix,".px",sep=""),"control.csv")
+
+  #Delete file if it exists
+  if (file.exists("control.csv")) {file.remove("control.csv")}
+# END Subject-area, units
+
+
+# Description
+    # Do control file
+    writeLines("DESCRIPTION;languagecode","control.csv")
+    write_lines("Agespecific Fertility;en","control.csv", append = TRUE)
+    write_lines("Aldersbetinget fertilitet;da","control.csv", append = TRUE)
+
+    pxjob_add(paste(matrix,".px",sep=""),"control.csv")
+
+    #Delete file if it exists
+    if (file.exists("control.csv")) {file.remove("control.csv")}
+# END Description
+
+# Timeval
+  # Do control file
+    write_lines("TIMEVAL;A","control.csv", append = TRUE)
+    write_lines("variablename;Year","control.csv", append = TRUE)
+  #
+    pxjob_add(paste(matrix,".px",sep=""),"control.csv")
+
+  #Delete file if it exists
+    if (file.exists("control.csv")) {file.remove("control.csv")}
+# END Description
+

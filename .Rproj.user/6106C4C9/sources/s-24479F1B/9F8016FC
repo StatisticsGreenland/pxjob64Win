@@ -1,0 +1,32 @@
+{
+    "id": "9F8016FC",
+    "path": null,
+    "project_path": null,
+    "type": "r_dataframe",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1610011762012.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "expression": "SF_CITI02",
+        "caption": "SF_CITI02",
+        "totalObservations": "1050",
+        "displayedObservations": "1050",
+        "variables": "3",
+        "cacheKey": "0DC91216",
+        "object": "SF_CITI02",
+        "environment": "",
+        "contentUrl": "grid_resource/gridviewer.html?env=&obj=SF_CITI02&cache_key=0DC91216&max_cols=50",
+        "preview": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 8386103164102909984,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1610011762012,
+    "read_only": false,
+    "read_only_alternatives": []
+}
