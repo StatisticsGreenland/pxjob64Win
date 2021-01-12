@@ -1,0 +1,967 @@
+2021-01-06 23:11:57,188 [56] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX03.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX03.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:12:08,500 [30] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX12.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:12:08,938 [56] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20111207 09:00
+2021-01-06 23:12:08,953 [56] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX12.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=51
+2021-01-06 23:12:09,828 [30] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX12.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:12:19,047 [32] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX04.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX04.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX04.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:12:19,047 [32] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX04.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX04.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:12:21,719 [56] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX04.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX04.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX04.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:12:21,719 [56] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX04.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX04.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:12:37,203 [25] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX06.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:12:37,328 [30] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20111207 09:00
+2021-01-06 23:12:37,359 [30] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX06.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=782
+2021-01-06 23:12:37,953 [14] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX06.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:13:12,843 [30] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX05.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX05.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX05.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:13:12,843 [30] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX05.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX05.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:13:15,562 [25] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX05.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX05.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX05.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:13:15,562 [25] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX05.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX05.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:13:26,890 [10] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX01.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:13:27,015 [18] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20111207 09:00
+2021-01-06 23:13:27,015 [18] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX01.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=969
+2021-01-06 23:13:27,608 [25] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX01.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:13:45,374 [55] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX07.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:13:45,499 [25] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20111207 09:00
+2021-01-06 23:13:45,499 [25] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX07.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=2958
+2021-01-06 23:13:46,139 [14] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX07.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:13:55,624 [33] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX09.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:13:55,749 [10] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20111207 09:00
+2021-01-06 23:13:55,764 [10] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX09.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=663
+2021-01-06 23:13:56,780 [55] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX09.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:14:06,014 [32] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX14.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX14.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX14.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:14:06,014 [32] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX14.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX14.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:14:08,858 [33] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX14.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX14.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX14.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:14:08,858 [33] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX14.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX14.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:14:20,045 [12] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX11.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:14:20,170 [33] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20111207 09:00
+2021-01-06 23:14:20,170 [33] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX11.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=408
+2021-01-06 23:14:20,780 [12] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX11.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:14:30,608 [25] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX08.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:14:30,733 [54] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20111207 09:00
+2021-01-06 23:14:30,733 [54] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX08.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=1020
+2021-01-06 23:14:31,358 [56] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX08.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:14:48,982 [54] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX13.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:14:49,185 [10] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20181115 09:00
+2021-01-06 23:14:49,185 [10] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX13.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=782
+2021-01-06 23:14:53,857 [30] INFO  api-usage - url=/api/v1/en/Greenland/NR/NRX13.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:15:03,185 [12] INFO  api-usage - url=/api/v1/en/Greenland/TU/TUX01.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:15:03,310 [18] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20120906 09:00
+2021-01-06 23:15:03,310 [18] INFO  api-usage - url=/api/v1/en/Greenland/TU/TUX01.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=360
+2021-01-06 23:15:03,904 [54] INFO  api-usage - url=/api/v1/en/Greenland/TU/TUX01.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:15:13,138 [14] INFO  api-usage - url=/api/v1/en/Greenland/PR/PRXPLI.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:15:13,263 [55] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20150126 09:00
+2021-01-06 23:15:13,263 [55] INFO  api-usage - url=/api/v1/en/Greenland/PR/PRXPLI.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=122
+2021-01-06 23:15:13,873 [14] INFO  api-usage - url=/api/v1/en/Greenland/PR/PRXPLI.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:15:23,107 [30] INFO  api-usage - url=/api/v1/en/Greenland/IE/IEXEXP.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:15:23,263 [56] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20130620 09:00
+2021-01-06 23:15:23,279 [56] INFO  api-usage - url=/api/v1/en/Greenland/IE/IEXEXP.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=26532
+2021-01-06 23:15:24,029 [55] INFO  api-usage - url=/api/v1/en/Greenland/IE/IEXEXP.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:15:37,450 [33] INFO  api-usage - url=/api/v1/en/Greenland/KR/KRXSA.px, type=error, caller=93.191.156.68, cached=false, message=Parameter error
+2021-01-06 23:15:40,310 [32] INFO  api-usage - url=/api/v1/en/Greenland/KR/KRXSA.px, type=error, caller=93.191.156.68, cached=false, message=Parameter error
+2021-01-06 23:15:51,903 [33] INFO  api-usage - url=/api/v1/kl/Greenland/TU/TUX01.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:15:52,028 [10] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20120906 09:00
+2021-01-06 23:15:52,028 [10] INFO  api-usage - url=/api/v1/kl/Greenland/TU/TUX01.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=360
+2021-01-06 23:15:55,185 [32] INFO  api-usage - url=/api/v1/kl/Greenland/TU/TUX01.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:16:10,966 [56] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX01.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:16:11,106 [33] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20111207 09:00
+2021-01-06 23:16:11,106 [33] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX01.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=969
+2021-01-06 23:16:11,747 [14] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX01.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:16:20,997 [10] INFO  api-usage - url=/api/v1/en/Greenland/IE/IEX2PROD.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:16:21,137 [33] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20130620 09:00
+2021-01-06 23:16:21,137 [33] INFO  api-usage - url=/api/v1/en/Greenland/IE/IEX2PROD.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=9504
+2021-01-06 23:16:21,919 [14] INFO  api-usage - url=/api/v1/en/Greenland/IE/IEX2PROD.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:16:45,731 [33] INFO  api-usage - url=/api/v1/en/Greenland/KO/KOXLAN.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:16:45,856 [14] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20150527 09:00
+2021-01-06 23:16:45,856 [14] INFO  api-usage - url=/api/v1/en/Greenland/KO/KOXLAN.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=852
+2021-01-06 23:16:46,449 [54] INFO  api-usage - url=/api/v1/en/Greenland/KO/KOXLAN.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:16:55,949 [32] INFO  api-usage - url=/api/v1/en/Greenland/KR/KRXAN.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:16:56,090 [55] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20160617 09:00
+2021-01-06 23:16:56,137 [55] INFO  api-usage - url=/api/v1/en/Greenland/KR/KRXAN.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=43092
+2021-01-06 23:16:56,965 [32] INFO  api-usage - url=/api/v1/en/Greenland/KR/KRXAN.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:17:13,433 [30] INFO  api-usage - url=/api/v1/kl/Greenland/KR/KRXSA.px, type=error, caller=93.191.156.68, cached=false, message=Parameter error
+2021-01-06 23:17:16,121 [54] INFO  api-usage - url=/api/v1/kl/Greenland/KR/KRXSA.px, type=error, caller=93.191.156.68, cached=false, message=Parameter error
+2021-01-06 23:17:27,496 [56] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX12.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:17:27,621 [55] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20111207 09:00
+2021-01-06 23:17:27,621 [55] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX12.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=51
+2021-01-06 23:17:28,214 [55] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX12.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:17:44,199 [33] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX10.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:17:44,324 [54] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20111207 09:00
+2021-01-06 23:17:44,324 [54] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX10.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=204
+2021-01-06 23:17:44,933 [54] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX10.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:17:55,573 [10] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX11.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:17:55,698 [12] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20111207 09:00
+2021-01-06 23:17:55,698 [12] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX11.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=408
+2021-01-06 23:17:56,370 [54] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX11.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:18:07,636 [25] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX07.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:18:07,776 [10] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20111207 09:00
+2021-01-06 23:18:07,792 [10] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX07.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=2958
+2021-01-06 23:18:08,401 [54] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX07.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:18:17,636 [12] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX05.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX05.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX05.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:18:17,636 [12] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX05.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX05.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:18:20,542 [54] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX05.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX05.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX05.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:18:20,542 [54] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX05.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX05.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:18:31,823 [14] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX08.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:18:32,010 [32] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20111207 09:00
+2021-01-06 23:18:32,010 [32] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX08.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=1020
+2021-01-06 23:18:32,995 [33] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX08.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:18:42,213 [30] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX03.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX03.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX03.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:18:42,213 [30] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX03.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX03.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:18:44,838 [14] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX03.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX03.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX03.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:18:44,838 [14] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX03.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX03.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:18:56,260 [55] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX09.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:18:56,385 [32] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20111207 09:00
+2021-01-06 23:18:56,385 [32] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX09.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=663
+2021-01-06 23:18:57,026 [56] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX09.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:19:06,244 [55] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX13.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:19:06,369 [14] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20181115 09:00
+2021-01-06 23:19:06,385 [14] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX13.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=782
+2021-01-06 23:19:07,010 [18] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX13.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:19:21,353 [14] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX14.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX14.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX14.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:19:21,353 [14] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX14.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX14.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:19:23,916 [55] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX14.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX14.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX14.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:19:23,916 [55] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX14.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX14.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:19:35,588 [25] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX02.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:19:35,713 [55] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20111207 09:00
+2021-01-06 23:19:35,713 [55] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX02.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=119
+2021-01-06 23:19:36,963 [32] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX02.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:20:00,259 [33] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX06.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:20:00,384 [14] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20111207 09:00
+2021-01-06 23:20:00,384 [14] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX06.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=782
+2021-01-06 23:20:01,118 [33] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX06.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:20:10,337 [55] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX04.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX04.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX04.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:20:10,337 [55] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX04.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX04.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:20:13,024 [14] INFO  api-usage - url=/api/v1/kl/Greenland/NR/NRX04.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX04.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX04.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:20:13,024 [14] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX04.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\NR\NRX04.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:20:24,368 [55] INFO  api-usage - url=/api/v1/kl/Greenland/PR/PRXPLI.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:20:24,493 [32] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20150126 09:00
+2021-01-06 23:20:24,493 [32] INFO  api-usage - url=/api/v1/kl/Greenland/PR/PRXPLI.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=122
+2021-01-06 23:20:25,102 [55] INFO  api-usage - url=/api/v1/kl/Greenland/PR/PRXPLI.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:20:34,555 [30] INFO  api-usage - url=/api/v1/kl/Greenland/IE/IEXEXP.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:20:34,712 [18] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20130620 09:00
+2021-01-06 23:20:34,727 [18] INFO  api-usage - url=/api/v1/kl/Greenland/IE/IEXEXP.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=26532
+2021-01-06 23:20:35,462 [14] INFO  api-usage - url=/api/v1/kl/Greenland/IE/IEXEXP.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:20:44,696 [32] INFO  api-usage - url=/api/v1/en/Greenland/IN/IN20/INXH2.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH2.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH2.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:20:44,696 [32] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH2.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH2.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:20:47,415 [30] INFO  api-usage - url=/api/v1/en/Greenland/IN/IN20/INXH2.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH2.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH2.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:20:47,415 [30] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH2.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH2.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:20:59,742 [14] INFO  api-usage - url=/api/v1/en/Greenland/IN/IN20/INXH1.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH1.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH1.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:20:59,742 [14] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH1.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH1.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:21:03,196 [55] INFO  api-usage - url=/api/v1/en/Greenland/IN/IN20/INXH1.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH1.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH1.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:21:03,196 [55] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH1.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH1.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:21:13,820 [25] INFO  api-usage - url=/api/v1/en/Greenland/PR/PRXBYG1.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:21:13,945 [55] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20110926 09:00
+2021-01-06 23:21:13,961 [55] INFO  api-usage - url=/api/v1/en/Greenland/PR/PRXBYG1.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=4320
+2021-01-06 23:21:14,648 [30] INFO  api-usage - url=/api/v1/en/Greenland/PR/PRXBYG1.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:21:23,867 [14] INFO  api-usage - url=/api/v1/en/Greenland/PR/PRXPRISW.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:21:23,992 [56] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20100930 15:00
+2021-01-06 23:21:24,008 [56] INFO  api-usage - url=/api/v1/en/Greenland/PR/PRXPRISW.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=650
+2021-01-06 23:21:24,617 [25] INFO  api-usage - url=/api/v1/en/Greenland/PR/PRXPRISW.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:21:34,101 [14] INFO  api-usage - url=/api/v1/en/Greenland/PR/PRXPRISV.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:21:34,258 [56] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20100930 15:00
+2021-01-06 23:21:34,258 [56] INFO  api-usage - url=/api/v1/en/Greenland/PR/PRXPRISV.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=650
+2021-01-06 23:21:34,851 [14] INFO  api-usage - url=/api/v1/en/Greenland/PR/PRXPRISV.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:21:48,179 [32] INFO  api-usage - url=/api/v1/en/Greenland/PR/PRXPRISF.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:21:48,304 [10] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20100930 15:00
+2021-01-06 23:21:48,304 [10] INFO  api-usage - url=/api/v1/en/Greenland/PR/PRXPRISF.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=500
+2021-01-06 23:21:48,914 [32] INFO  api-usage - url=/api/v1/en/Greenland/PR/PRXPRISF.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:22:17,866 [10] INFO  api-usage - url=/api/v1/en/Greenland/PR/PRXPRISH.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:22:17,991 [32] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20130327 09:00
+2021-01-06 23:22:17,991 [32] INFO  api-usage - url=/api/v1/en/Greenland/PR/PRXPRISH.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=100
+2021-01-06 23:22:18,601 [14] INFO  api-usage - url=/api/v1/en/Greenland/PR/PRXPRISH.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:22:28,350 [30] INFO  api-usage - url=/api/v1/en/Greenland/PR/PRXPRISR.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:22:28,491 [14] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20100930 15:00
+2021-01-06 23:22:28,491 [14] INFO  api-usage - url=/api/v1/en/Greenland/PR/PRXPRISR.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=400
+2021-01-06 23:22:29,100 [54] INFO  api-usage - url=/api/v1/en/Greenland/PR/PRXPRISR.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:22:38,444 [12] INFO  api-usage - url=/api/v1/en/Greenland/BO/BO99/BOX002.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:22:38,569 [10] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20100514 09:00
+2021-01-06 23:22:38,569 [10] INFO  api-usage - url=/api/v1/en/Greenland/BO/BO99/BOX002.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=810
+2021-01-06 23:22:39,163 [12] INFO  api-usage - url=/api/v1/en/Greenland/BO/BO99/BOX002.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:22:48,538 [55] INFO  api-usage - url=/api/v1/en/Greenland/BO/BO99/BOX003.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:22:48,663 [54] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20100514 09:00
+2021-01-06 23:22:48,663 [54] INFO  api-usage - url=/api/v1/en/Greenland/BO/BO99/BOX003.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=60
+2021-01-06 23:22:49,256 [10] INFO  api-usage - url=/api/v1/en/Greenland/BO/BO99/BOX003.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:23:01,647 [25] INFO  api-usage - url=/api/v1/en/Greenland/BO/BO99/BOX001.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:23:01,772 [18] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20090916 09:00
+2021-01-06 23:23:01,772 [18] INFO  api-usage - url=/api/v1/en/Greenland/BO/BO99/BOX001.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=990
+2021-01-06 23:23:02,366 [25] INFO  api-usage - url=/api/v1/en/Greenland/BO/BO99/BOX001.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:23:12,131 [10] INFO  api-usage - url=/api/v1/en/Greenland/BO/BO99/BOX004.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:23:12,397 [32] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20100514 09:00
+2021-01-06 23:23:12,397 [32] INFO  api-usage - url=/api/v1/en/Greenland/BO/BO99/BOX004.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=231
+2021-01-06 23:23:13,006 [54] INFO  api-usage - url=/api/v1/en/Greenland/BO/BO99/BOX004.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:23:22,225 [30] INFO  api-usage - url=/api/v1/en/Greenland/IE/IEXDETEX.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEXDETEX.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEXDETEX.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:23:22,225 [30] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEXDETEX.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEXDETEX.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:23:24,881 [30] INFO  api-usage - url=/api/v1/en/Greenland/IE/IEXDETEX.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEXDETEX.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEXDETEX.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:23:24,881 [30] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEXDETEX.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEXDETEX.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:25:29,348 [25] INFO  api-usage - url=/api/v1/en/Greenland/IE/IEXDETIM.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEXDETIM.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEXDETIM.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:25:29,348 [25] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEXDETIM.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEXDETIM.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:25:32,176 [30] INFO  api-usage - url=/api/v1/en/Greenland/IE/IEXDETIM.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEXDETIM.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEXDETIM.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:25:32,176 [30] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEXDETIM.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEXDETIM.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:25:43,207 [32] INFO  api-usage - url=/api/v1/en/Greenland/IE/IEX2SITC.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEX2SITC.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEX2SITC.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:25:43,207 [32] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEX2SITC.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEX2SITC.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:25:46,082 [10] INFO  api-usage - url=/api/v1/en/Greenland/IE/IEX2SITC.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEX2SITC.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEX2SITC.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:25:46,082 [10] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEX2SITC.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEX2SITC.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:25:57,175 [12] INFO  api-usage - url=/api/v1/en/Greenland/IE/IEX1SITC.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEX1SITC.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEX1SITC.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:25:57,175 [12] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEX1SITC.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEX1SITC.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:25:59,925 [54] INFO  api-usage - url=/api/v1/en/Greenland/IE/IEX1SITC.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEX1SITC.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEX1SITC.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:25:59,925 [54] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEX1SITC.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IE\IEX1SITC.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:26:11,300 [30] INFO  api-usage - url=/api/v1/en/Greenland/KO/KOXSKT.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:26:11,441 [14] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20150527 09:00
+2021-01-06 23:26:11,441 [14] INFO  api-usage - url=/api/v1/en/Greenland/KO/KOXSKT.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=2840
+2021-01-06 23:26:12,128 [54] INFO  api-usage - url=/api/v1/en/Greenland/KO/KOXSKT.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:26:21,362 [30] INFO  api-usage - url=/api/v1/en/Greenland/KO/KOXGOD.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:26:21,487 [25] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20150527 09:00
+2021-01-06 23:26:21,487 [25] INFO  api-usage - url=/api/v1/en/Greenland/KO/KOXGOD.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=408
+2021-01-06 23:26:22,097 [10] INFO  api-usage - url=/api/v1/en/Greenland/KO/KOXGOD.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:26:31,378 [30] INFO  api-usage - url=/api/v1/kl/Greenland/KR/KRXAF1.px, type=error, caller=93.191.156.68, cached=false, message=Parameter error
+2021-01-06 23:26:34,097 [18] INFO  api-usage - url=/api/v1/kl/Greenland/KR/KRXAF1.px, type=error, caller=93.191.156.68, cached=false, message=Parameter error
+2021-01-06 23:26:45,799 [14] INFO  api-usage - url=/api/v1/kl/Greenland/KO/KOXDET.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:26:45,924 [56] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20150527 09:00
+2021-01-06 23:26:45,924 [56] INFO  api-usage - url=/api/v1/kl/Greenland/KO/KOXDET.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=184
+2021-01-06 23:26:46,518 [30] INFO  api-usage - url=/api/v1/kl/Greenland/KO/KOXDET.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:26:55,877 [33] INFO  api-usage - url=/api/v1/kl/Greenland/KO/KOXLAN.px, type=metadata, caller=93.191.156.68, cached=false, format=json
+2021-01-06 23:26:56,002 [32] INFO  PCAxis.Serializers.JsonStat.JsonStatSerializer - Trying to parse .CreationDate from Paxiom => 20150527 09:00
+2021-01-06 23:26:56,002 [32] INFO  api-usage - url=/api/v1/kl/Greenland/KO/KOXLAN.px, type=data, caller=93.191.156.68, cached=false, format=json-stat, matrix-size=852
+2021-01-06 23:26:56,596 [25] INFO  api-usage - url=/api/v1/kl/Greenland/KO/KOXLAN.px, type=data, caller=93.191.156.68, cached=true, format=application/json; charset=utf-8, matrix-size=?
+2021-01-06 23:27:06,862 [10] INFO  api-usage - url=/api/v1/en/Greenland/IN/IN40/INXF1.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN40\INXF1.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN40\INXF1.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:27:06,862 [10] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN40\INXF1.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN40\INXF1.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:27:09,377 [12] INFO  api-usage - url=/api/v1/en/Greenland/IN/IN40/INXF1.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN40\INXF1.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN40\INXF1.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:27:09,377 [12] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN40\INXF1.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN40\INXF1.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:27:20,877 [32] INFO  api-usage - url=/api/v1/en/Greenland/IN/IN20/INXH4.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH4.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH4.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:27:20,877 [32] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH4.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH4.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:27:23,518 [25] INFO  api-usage - url=/api/v1/en/Greenland/IN/IN20/INXH4.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH4.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH4.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:27:23,518 [25] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH4.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH4.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:27:37,986 [55] INFO  api-usage - url=/api/v1/en/Greenland/IN/IN20/INXH5.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH5.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH5.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:27:37,986 [55] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH5.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH5.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:27:40,517 [33] INFO  api-usage - url=/api/v1/en/Greenland/IN/IN20/INXH5.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH5.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH5.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:27:40,517 [33] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH5.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH5.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:27:52,017 [18] INFO  api-usage - url=/api/v1/en/Greenland/IN/IN20/INXH3.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH3.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH3.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:27:52,017 [18] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH3.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH3.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:27:54,548 [33] INFO  api-usage - url=/api/v1/en/Greenland/IN/IN20/INXH3.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH3.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH3.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:27:54,548 [33] WARN  PCAxis.Api.SSDHandler - System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH3.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\IN\IN20\INXH3.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:28:06,251 [14] INFO  api-usage - url=/api/v1/kl/Greenland/UD/UD80/UDXUMG3.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\UD\UD80\UDXUMG3.px'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:28:06,251 [14] WARN  PCAxis.Api.SSDHandler - System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\UD\UD80\UDXUMG3.px'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.GetTableMeta(HttpContext context, String language, String db, String[] tablePath)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:28:09,142 [54] INFO  api-usage - url=/api/v1/kl/Greenland/UD/UD80/UDXUMG3.px, type=error, caller=93.191.156.68, cached=false 
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\UD\UD80\UDXUMG3.px'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:28:09,142 [54] WARN  PCAxis.Api.SSDHandler - System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\UD\UD80\UDXUMG3.px'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PCAxis.Api.SSDHandler.SendTableData(HttpContext context, String language, String db, String[] tablePath, ResponseBucket cacheResponse)
+   at PCAxis.Api.SSDHandler.ProcessRequest(HttpContext context)
+2021-01-06 23:42:16,815 [55] ERROR PXWeb.Modules.PXWebHttpModule - PX-Web Application Error ---> Offending URL: https://bank.stat.gl/pxweb/da/Greenland/Greenland__SU__SU01/SUXLDM1.px/?rxid=SUXLDM127-03-2020 23:29:04 -- Source: System.Web -- Message: Exception of type 'System.Web.HttpUnhandledException' was thrown. -- Inner exception message: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\SU\SU01\SUXLDM1.px'. -- Stack trace:    at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-01-06 23:42:16,815 [55] ERROR Global - System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.IO.FileNotFoundException: Could not find file 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\SU\SU01\SUXLDM1.px'.
+File name: 'C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\SU\SU01\SUXLDM1.px'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at PCAxis.Paxiom.Parsers.PXFileParser.ParseMeta(MetaHandler handler, String preferredLanguage)
+   at PCAxis.Paxiom.PXModelBuilderAdapter.BuildForSelection()
+   at PCAxis.Paxiom.PXFileBuilder.BuildForSelection()
+   at PXWeb.Management.PxContext.GetPaxiomForSelection(String db, String path, String table, String prefLang, Boolean clearModel)
+   at PXWeb.Selection.Page_Load(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-01-06 23:59:40,220 [11] INFO  PXWeb.BackgroundWorker.PxWebBackgroundWorker - PX-Web background worker iteration started
+2021-01-06 23:59:40,220 [11] INFO  PXWeb.BackgroundWorker.PxWebBackgroundWorker - HandleSearchIndex called for database:Greenland
+2021-01-06 23:59:40,220 [11] INFO  PXWeb.BackgroundWorker.PxWebBackgroundWorker - No action taken for  database:Greenland
+2021-01-06 23:59:40,220 [11] INFO  PXWeb.BackgroundWorker.PxWebBackgroundWorker - HandleSearchIndex called for database:GSmicro
+2021-01-06 23:59:40,220 [11] INFO  PXWeb.BackgroundWorker.PxWebBackgroundWorker - No action taken for  database:GSmicro
+2021-01-06 23:59:40,220 [11] INFO  PXWeb.BackgroundWorker.PxWebBackgroundWorker - PX-Web background worker iteration ended - going to sleep
