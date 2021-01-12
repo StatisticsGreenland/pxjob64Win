@@ -19,3 +19,4 @@ system(paste(pxjob, " px" , " in=",tmp_file," out=",matrix,".px",sep=""))
 system(paste(pxjob, " px" , " in=", matrix, ".px", " meta=", ctl_file, " -a", sep=""))
 
 
+https://Github.com/LarsLap/pxjob64win/statslog2px.html
