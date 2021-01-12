@@ -1,0 +1,113 @@
+CHARSET="ANSI";
+CODEPAGE="windows-1252";
+LANGUAGE="en";
+LANGUAGES="en","da","kl";
+DECIMALS=0;
+MATRIX="SBXSBSTAT01";
+SUBJECT-CODE="SB";
+SUBJECT-AREA="StatBank";
+SUBJECT-AREA[da]="Statistikbank";
+SUBJECT-AREA[kl]="Kisitsisaataasivik";
+DESCRIPTION="Statbank count <em>[SBESTATBANK01]</em>";
+DESCRIPTION[da]="Statistikbank statistik <em>[SBDSTATBANK01]</em>";
+DESCRIPTION[kl]="Kisitsisaataasivik count <em>[SBNSTATBANK01]</em>";
+TITLE="count by subject, language and time";
+TITLE[da]="antal efter emne, sprog og tid";
+TITLE[kl]="antal : sub, language , time";
+CONTENTS="count";
+CONTENTS[da]="antal";
+CONTENTS[kl]="antal";
+UNITS="count";
+UNITS[da]="antal";
+UNITS[kl]="count";
+STUB="subject","language";
+STUB[da]="emne","sprog";
+STUB[kl]="sub","language";
+HEADING="time";
+HEADING[da]="tid";
+HEADING[kl]="time";
+VALUES("subject")="Labour Market","Public Finances","Prices","Social Services",
+"Tobacco and alcohol","Tourism","Education","Foreign Trade","Short term trends","Names",
+"Population","Health","Energy","Fisheries and Catch","Income","Criminal offences",
+"National Accounts","NA";
+VALUES[da]("emne")="Arbejdsmarked","Offentlige finanser","Priser","Socialområdet",
+"Tobak og alkohol","Turisme","Uddannelse","Udenrigsøkonomi","Konjunktur","Navne","Befolkning",
+"Sundhed","Energi","Fiskeri og fangst","Indkomst","Kriminalitet","Nationalregnskab","NA";
+VALUES[kl]("sub")="Suliffeqarnermi pissutsit","Pisortat aningaasaataat","Akit",
+"Isumaginninnermut tunngasut","Tupa imigassarlu aalakoornartulik","Takornariartitsineq",
+"Ilinniartitaaneq","Nunanik allanik niueqateqarneq","Aningaasaqarnikkut pissutsit","Inuit aqqi",
+"Innuttaasut","Sundhed kl","Nukissiuuteqarneq","Aalisarneq piniarnerlu","Isertitat",
+"Pinerluuteqarsimasut pillugit kisitsisit","Nuna tamakkerlugu naatsorsuutit","NA";
+VALUES("language")="Danish","English","Greenlandic";
+VALUES[da]("sprog")="Dansk","Engelsk","Grønlandsk";
+VALUES[kl]("language")="Dansk","Engelsk","Kalaallisut";
+VALUES("time")="2020M11","2020M12","2021M 1";
+VALUES[da]("tid")="2020M11","2020M12","2021M 1";
+VALUES[kl]("time")="2020M11","2020M12","2021M 1";
+CODES("subject")="1","10","11","12","14","15","16","17","18","19","2","20","3","5","7","8","9","NA";
+CODES[da]("emne")="1","10","11","12","14","15","16","17","18","19","2","20","3","5","7","8","9","NA";
+CODES[kl]("sub")="1","10","11","12","14","15","16","17","18","19","2","20","3","5","7","8","9","NA";
+CODES("language")="0","2","1";
+CODES[da]("sprog")="0","2","1";
+CODES[kl]("language")="0","2","1";
+ELIMINATION("subject")=YES;
+ELIMINATION[da]("emne")=YES;
+ELIMINATION[kl]("sub")=YES;
+ELIMINATION("language")=YES;
+ELIMINATION[da]("sprog")=YES;
+ELIMINATION[kl]("language")=YES;
+DATA=
+201 222 14 
+93 76 19 
+0 0 0 
+61 73 27 
+1 2 10 
+1 0 0 
+57 81 50 
+12 7 13 
+0 1 0 
+71 114 5 
+1 9 49 
+28 11 0 
+32 11 3 
+10 3 2 
+0 10 0 
+378 123 16 
+109 100 9 
+12 0 0 
+131 373 65 
+16 18 6 
+4 4 0 
+97 33 5 
+3 39 6 
+1 0 0 
+21 11 0 
+1 0 0 
+0 0 0 
+58 13 0 
+0 6 3 
+13 32 8 
+722 933 161 
+248 397 49 
+135 62 6 
+188 68 11 
+25 17 1 
+6 7 2 
+41 19 0 
+22 18 14 
+0 1 0 
+213 172 19 
+32 61 5 
+16 4 0 
+140 184 19 
+15 20 123 
+32 0 0 
+70 39 19 
+3 6 31 
+0 0 0 
+128 56 7 
+31 42 12 
+3 0 0 
+2 4 5 
+6 1 1 
+1 1 0; 

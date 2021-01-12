@@ -1,0 +1,581 @@
+---
+output: 
+  html_document:
+    code_folding: show
+editor_options: 
+  chunk_output_type: console
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE)
+```
+&nbsp;
+
+&nbsp;
+
+
+# Creating px-files in R
+
+PXEdit/PXJob are fantastic tools to create px-files, manually or automated, as it brings data and metadata together for dissemination with PXWeb/PXWin/PCAxis.
+
+This learning material is on how to use PXJob to transform Tidy data into px-files. Any Tidy dataset would do, but as example log-files from PXWeb on the statbank server at Statistics Greenland is used. Some logfiles have been added to the R-package github.com/StatisticsGreenland/statbanklog.
+
+
+
+
+&nbsp;
+
+&nbsp;
+
+
+## Example: From PXWeb-logfiles on bank.stat.gl to px-files
+
+Unfortunately 'PXWeb-out-of-the-box' does not offer usage statistics of any kind. Most likely all PXWeb-based services regularly need to deliver management information as PXWeb is vital to many statistical offices dissemination policy. But PXWeb does store the information needed in logfiles. And the easiest methods to disseminate information is with PXWeb.
+
+The tricky part is ironically transfering the information to px-files. But as this example will demonstrate, it is not all that difficult, when using PXJob. To serve as leaning material this example use R, free to all, to demonstrate how PXJob in a Windows environment, but the methods are transferable to other programming languages.
+
+Starting with PXJob 4.0 mulitilingual px-files can be produced from a (px)structural table holding data and metadata in chosen languages. Additional metadata can be added/edited in keyword blocks. 
+
+Studying and comparing a structural file to a tidy-file in R/Tidyverse the repetition of column-headers as variable-names has to change. Each column-name needs to be unique in a tidy dataset.
+
+To accommodate that, Veli-Matti Jantunen included some few these changes to PXJob, alowing to add extensions to variable-names:
+
+•	if the names are equal when the (last) extension is removed, they’ll become the variable names (e.g. population.da population.no)
+
+•	you may use language codes or other meaningful texts (the length is not important), but they are NOT used at this point, i.e. otherwise than recognising and removing the extension, the algorithm works as documented
+
+•	if you use the variable names in keyword blocks, use the bare variable name (population)
+
+In other words, the list
+
+population.code population.da population.fi country.fi
+
+becomes
+
+  population population population country (in the structral file)
+
+before further reading, but
+
+  population.fi country.fi
+                           
+stays intact (no repeated names)
+
+
+For now (January 2021) a testversion of 3 core files from PXJob has been put in a R-package on www.github/LarsLap/pxjob64Win
+
+When you install the package:
+
+devtools::install_github("LarsLap/pxjob64Win")
+
+R will learn where to find the components by this command:
+
+pxjob <- c(system.file(package = "pxjob64Win","PxJob64.exe"))
+
+
+
+```{r setup Do_Px, eval=FALSE, echo=FALSE}
+
+# Commands used to setup Do_Px ------------------------------------------------------------
+
+#install.packages("devtools")
+#library(devtools)
+#devtools::install_github("LarsLap/pxjob64Win")
+
+
+```
+
+
+
+
+### Read all log-files from a folder/directory
+
+PXWeb has 3 different log-files apart from the normal web-server logs. They are stored on the server in:
+
+~/PxWeb/logs
+
+
+api.log* 
+pxweb.log* 
+stats.log*
+
+First we take a look at stats.log, saved as one file pr day, where one line is added to the log-file for each table being extrated or manipulated in the StatBank.
+
+The line holds these informations:
+
+a) 2020-12-19 06:43:01,028 [20] INFO  PCAxis.Web.Controls.PxDefaultLogger - 
+b) Context=Selection,
+c) UserId=userid, 
+d) Language=da, 
+e) Database=Greenland, 
+f) ActionType=Presentation, 
+g) ActionName=tableViewLayout1, 
+h) TableId=C:\inetpub\wwwroot\PxWeb\Resources\PX\Databases\Greenland\UD\UD40\UD4020\UDXISCPROH.px, 
+i) NumberOfCells=3, 
+j) NumberOfContents=1
+
+
+Content in each column is now checked with:
+
+library(sqldf)
+variableContent <- sqldf("select distinct ActionName from statlog")
+
+And in the Greenlandic StatBank sample-files We finde:
+
+**Context**
+Selection,
+Presentation
+
+**UserId**
+is not set
+
+**Language**
+en,
+da,
+kl
+
+**Database**
+Greenland,
+GSmicro
+
+**ActionType**
+Presentation,
+SaveAs,
+Operation 
+
+**ActionName**
+tableViewSorted,
+tableViewLayout2,
+tableViewLayout1,
+sum,
+subtract,
+pivotManual,
+pivotCW,
+pivotCCW,
+perPart,
+informationView,
+footnoteView,
+FileTypeRelational,
+FileTypePX,
+FileTypeJsonStat,
+FileTypeJson,
+FileTypeHtml5Table,
+FileTypeHtml,
+FileTypeExcelXDoubleColumn,
+FileTypeExcelX,
+FileTypeExcelDoubleColumn,
+FileTypeExcel,
+FileTypeCsvWithoutHeadingAndTabulator,
+FileTypeCsvWithHeadingAndTabulator,
+FileTypeCsvWithHeadingAndSpace,
+FileTypeCsvWithHeadingAndSemiColon,
+FileTypeCsvWithHeadingAndComma,
+FileTypeChartPng,
+FileTypeChartJpeg,
+divide,
+deleteVariable,
+deleteValue,
+chartViewRadar,
+chartViewPopulationPyramid,
+chartViewPoint,
+chartViewPie,
+chartViewLine,
+chartViewColumnStacked100,
+chartViewColumnStacked,
+chartViewColumnLine,
+chartViewColumn,
+chartViewBarStacked100,
+chartViewBarStacked,
+chartViewBar,
+chartViewAreaStacked100,
+chartViewAreaStacked,
+chartViewArea,
+changeValueOrder,
+changeTextCodePresentation
+
+**TableId**
+UDXISCPROH.px 
+
+**NumberOfCells**
+ 
+
+**NumberOfContents**
+
+
+
+When using read_log from Tidyverse the line is chopped using blanks as separator, naming the columns X1,x2,...,Xn
+
+First all files in the logs folder are read and passed to a file called statlog
+
+
+```{r Read_statslog, message=FALSE, warning=FALSE}
+
+# Preface ------------------------------------------------------------
+rm(list = ls())
+
+# Set your work-directory
+setwd("S:/STATBANK/bank2020/log")
+
+# Standard R-packages
+if(!require("tidyverse")) {install.packages("tidyverse")}
+library(tidyverse)
+if(!require("lubridate")) {install.packages("lubridate")}
+library(lubridate)
+
+
+# stat log files ------------------------------------------------------------
+
+# If you have your own set of log-files, select path to folder here, and modify code below
+# Set your log-directory (stat-input files)
+#Myfilenames = dir(path="C:/STATBANK/logs/", pattern = "stat*" ,full.names = TRUE)
+
+
+# sample from Statistics Greenland (included in pxjob64Win-package)
+logs <- c(system.file(package = "pxjob64Win","logs/logs/"))
+
+# Use log-files from sample
+filenames = dir(path=logs, pattern = "stat*" ,full.names = TRUE)
+
+# Read all log-files to one file with 'bind_rows'
+statlog <- filenames %>% 
+  map(read_log, col_names = FALSE,col_types=NULL) %>% 
+  reduce(bind_rows) %>% 
+  rename("time"=X1,"context"=X8,"userID"=X9,"language"=X10,"database"=X11,"actionType"=X12,"actionName"=X13, "tableID"=X14, "numberOfCells"=X15,"numberOfContents"=X16) %>% 
+  select("time","context","userID","language","database","actionType","actionName","tableID","numberOfCells","numberOfContents") 
+
+
+# Create variables and remove redundant text
+statlog$y <- year(statlog$time)
+statlog$month <- sprintf("%2d",month(statlog$time))
+statlog$yymm <- paste(statlog$y,"M",statlog$month,sep = "")
+statlog$day <- day(statlog$time)
+statlog$context <- gsub(".*=","",statlog$context)
+statlog$userID <- gsub(".*=","",statlog$userID)
+statlog$language <- gsub(".*=","",statlog$language)
+statlog$database <- gsub(".*=","",statlog$database)
+statlog$actionType <- gsub(".*=","",statlog$actionType)
+statlog$actionName <- gsub(".*=","",statlog$actionName)
+statlog$tableID <- gsub(".*=","",statlog$tableID)
+statlog$numberOfCells <- gsub(".*=","",statlog$numberOfCells)
+
+# Remove commas
+statlog$context <- gsub(",","",statlog$context)
+statlog$userID <- gsub(",","",statlog$userID)
+statlog$language <- gsub(",","",statlog$language)
+statlog$database <- gsub(",","",statlog$database)
+statlog$actionType <- gsub(",","",statlog$actionType)
+statlog$actionName <- gsub(",","",statlog$actionName)
+statlog$tableID <- gsub(",","",statlog$tableID)
+statlog$numberOfCells <- gsub(",","",statlog$numberOfCells)
+
+statlog$table_tmp <- gsub(".*[\\]","All/",statlog$tableID)
+statlog$table <- gsub(".*/","",statlog$table_tmp)
+statlog$table <- gsub(".px","",statlog$table)
+statlog$table <- gsub(".PX","",statlog$table)
+statlog$subcode <- str_to_upper(str_sub(statlog$table,1,2))
+
+
+```
+
+
+## Defining px-file SBXSBSTAT01
+
+The log-files holds a lot of information and one path could be, to create one px-file with all information. This will result in a very big px-file, difficult to handle, so in this first table, we shall focus on some few variables:
+
+
+Time : statlog$yymm (The px-file will have year & month in one timeseries)
+
+Subject : statlog$subcode
+
+Language : statlog$language
+
+
+And we filter only some of the information as we don't want a simple pivot (from actiontype == 'Operation') count as another table selection. So here we filter: 
+
+  filter(database == "Greenland")
+  
+  filter(actionType == "Presentation") 
+  
+  filter(actionName == "tableViewLayout1" | actionName == "tableViewLayout2") 
+
+
+StatBank Greenland names px-files with a 2 character prefix for subjects:
+
+AR - ARbejdsmarked (labourmarket)
+BE - BEfolkning (population)
+etc...
+
+
+To get that readable for us, first formats are defined
+
+
+
+```{r Formats, message=FALSE, warning=FALSE}
+
+by_sub.code <- c(
+"AR" = "1",
+"BE" = "2",
+"EN" = "3",
+"ER" = "4",
+"FI" = "5",
+"GR" = "6",
+"IN" = "7",
+"KR" = "8",
+"NR" = "9",
+"OF" = "10",
+"PR" = "11",
+"SO" = "12",
+"ST" = "13",
+"AL" = "14",
+"TU" = "15",
+"UD" = "16",
+"IE" = "17",
+"KO" = "18",
+"NA" = "19",
+"SU" = "20")
+
+
+by_sub.en <- c("AR" = "Labour Market",
+"BE" = "Population",
+"EN" = "Energy",
+"ER" = "Businesses",
+"FI" = "Fisheries and Catch",
+"GR" = "Greenlanders in Denmark",
+"IN" = "Income",
+"KR" = "Criminal offences",
+"NR" = "National Accounts",
+"OF" = "Public Finances",
+"PR" = "Prices",
+"SO" = "Social Services",
+"ST" = "Statistical Yearbook",
+"AL" = "Tobacco and alcohol",
+"TU" = "Tourism",
+"UD" = "Education",
+"IE" = "Foreign Trade",
+"KO" = "Short term trends",
+"NA" = "Names",
+"SU" = "Health")
+
+by_sub.da <- c("AR" = "Arbejdsmarked",
+"BE" = "Befolkning",
+"EN" = "Energi",
+"ER" = "Erhverv",
+"FI" = "Fiskeri og fangst",
+"GR" = "Grønlændere i Danmark",
+"IN" = "Indkomst",
+"KR" = "Kriminalitet",
+"NR" = "Nationalregnskab",
+"OF" = "Offentlige finanser",
+"PR" = "Priser",
+"SO" = "Socialområdet",
+"AL" = "Tobak og alkohol",
+"TU" = "Turisme",
+"UD" = "Uddannelse",
+"IE" = "Udenrigsøkonomi",
+"KO" = "Konjunktur",
+"NA" = "Navne",
+"SU" = "Sundhed")
+
+by_sub.kl <- c("AR" = "Suliffeqarnermi pissutsit",
+"BE" = "Innuttaasut",
+"EN" = "Nukissiuuteqarneq",
+"ER" = "Inuussutissarsiorneq",
+"FI" = "Aalisarneq piniarnerlu",
+"GR" = "Kalaallit Danmarkimi najugallit",
+"IN" = "Isertitat",
+"KR" = "Pinerluuteqarsimasut pillugit kisitsisit",
+"NR" = "Nuna tamakkerlugu naatsorsuutit",
+"OF" = "Pisortat aningaasaataat",
+"PR" = "Akit",
+"SO" = "Isumaginninnermut tunngasut",
+"ST" = "Ukiumoortumik paasissutissat",
+"AL" = "Tupa imigassarlu aalakoornartulik",
+"TU" = "Takornariartitsineq",
+"UD" = "Ilinniartitaaneq",
+"IE" = "Nunanik allanik niueqateqarneq",
+"KO" = "Aningaasaqarnikkut pissutsit",
+"NA" = "Inuit aqqi",
+"SU" = "Sundhed kl")
+
+
+by_language.code <- c("da" = "0",
+                 "kl" = "1",
+                 "en" = "2")
+
+by_language.en <- c("0" = "Danish",
+                "1" = "Greenlandic",
+                "2" = "English")
+
+by_language.da <- c("0" = "Dansk",
+               "1" = "Grønlandsk",
+               "2" = "Engelsk")
+
+by_language.kl <- c("0" = "Dansk",
+               "1" = "Kalaallisut",
+               "2" = "Engelsk")
+
+               
+```
+
+
+NEXT data is selected and wrangled
+
+
+```{r Select data, message=FALSE, warning=FALSE}
+
+slog <- statlog %>% 
+  filter(database == "Greenland") %>% 
+  filter(actionType == "Presentation") %>% 
+  filter(actionName == "tableViewLayout1" | actionName == "tableViewLayout2") %>% 
+  filter(context == "Selection") %>% 
+  select(yymm,subcode,language) %>% 
+  mutate(antal = 1) %>%
+  group_by(yymm,subcode,language) %>%
+  summarise(value = sum(antal)) %>%
+  ungroup() %>% 
+  mutate(sub.code = by_sub.code[subcode]) %>%
+  mutate(sub.en = by_sub.en[subcode]) %>%
+  mutate(sub.da = by_sub.da[subcode]) %>%
+  mutate(sub.kl = by_sub.kl[subcode]) %>% 
+  mutate(language.code = by_language.code[language]) %>%
+  mutate(language.en = by_language.en[language.code]) %>%
+  mutate(language.da = by_language.da[language.code]) %>%
+  mutate(language.kl = by_language.kl[language.code]) %>% 
+  arrange(sub.code,language.code) %>%
+  rename(time = yymm) %>% 
+  rename(subject.code = sub.code) %>% 
+  rename(subject.en = sub.en) %>% 
+  rename(subject.da = sub.da) %>% 
+  rename(subject.kl = sub.kl) %>% 
+  select(time,subject.code,subject.en,subject.da,subject.kl,language.code,language.en,language.da,language.kl,value)
+
+
+
+               
+```
+
+## Do_ _PX by PXJob
+
+After a file with data has been created it is time to convert it to a PX-file. The PX-file will be a lot richer in metadata, than the values and codes, defined so far. Metadata is added in keyword blocks.
+
+
+## To be improved, but ... as prove proof of concept, this works
+
+
+
+```{r Run Do_Px}
+
+library(pxjob64Win)
+pxjob <- c(system.file(package = "pxjob64Win","PxJob64.exe"))
+
+# temporary files on disc are deleted
+tmp_file = "output_tmp.csv"
+ctl_file = "control.csv"
+
+# setup Do_Px 1------------------------------------------------------------
+
+matrix = "SBXSBSTAT01"
+title = c("Statbank usage, Statistics Greenland;en,da,kl")
+languagecode = "languagecode;en;da;kl"
+variables = "VARIABLES;time,subject,language;tid,emne,sprog;time,sub,language"
+contents = "CONTENTS;count;antal;antal"
+
+
+# Do_Px
+#1 Write data to csv file
+write.table_with_header(slog,tmp_file,title,sep=';')
+write_lines("",tmp_file, append = TRUE)
+write_lines("",tmp_file, append = TRUE)
+write_lines(languagecode,tmp_file, append = TRUE)
+write_lines(variables,tmp_file, append = TRUE)
+write_lines(contents,tmp_file, append = TRUE)
+
+
+
+# convert to px
+system(paste(pxjob, " px" , " in=",tmp_file," out=",matrix,".px -f0",sep=""))
+if (file.exists(tmp_file)) {file.remove(tmp_file)}
+
+# Pivot
+# Do control file
+writeLines("STUB;HEADING",ctl_file)
+write_lines("subject,Language;time",ctl_file, append = TRUE)
+
+system(paste(pxjob, " px" , " in=", matrix, ".px", " meta=", ctl_file, " -a", sep=""))
+
+#Delete file if it exists
+if (file.exists(ctl_file)) {file.remove(ctl_file)}
+# END Pivot
+
+# Matrix, Subject-code
+# Do control file
+writeLines("MATRIX;SUBJECT-CODE",ctl_file)
+write_lines(matrix,ctl_file, append = TRUE)
+write_lines(";SB",ctl_file, append = TRUE)
+
+system(paste(pxjob, " px" , " in=", matrix, ".px", " meta=", ctl_file, " -a", sep=""))
+
+#Delete file if it exists
+if (file.exists(ctl_file)) {file.remove(ctl_file)}
+# END Matrix
+
+# Subject-area, units
+# Do control file
+writeLines("SUBJECT-AREA;UNITS;languagecode",ctl_file)
+write_lines("StatBank;;en",ctl_file, append = TRUE)
+write_lines("Statistikbank;;da",ctl_file, append = TRUE)
+write_lines("Kisitsisaataasivik;;kl",ctl_file, append = TRUE)
+write_lines(";count;en",ctl_file, append = TRUE)
+write_lines(";antal;da",ctl_file, append = TRUE)
+write_lines(";count;kl",ctl_file, append = TRUE)
+
+system(paste(pxjob, " px" , " in=", matrix, ".px", " meta=", ctl_file, " -a", sep=""))
+
+#Delete file if it exists
+if (file.exists(ctl_file)) {file.remove(ctl_file)}
+# END Subject-area, units
+
+
+# Description
+# Do control file
+writeLines("DESCRIPTION;languagecode",ctl_file)
+write_lines("Statbank count <em>[SBESTATBANK01]</em>;en",ctl_file, append = TRUE)
+write_lines("Statistikbank statistik <em>[SBDSTATBANK01]</em>;da",ctl_file, append = TRUE)
+write_lines("Kisitsisaataasivik count <em>[SBNSTATBANK01]</em>;kl",ctl_file, append = TRUE)
+
+system(paste(pxjob, " px" , " in=", matrix, ".px", " meta=", ctl_file, " -a", sep=""))
+
+#Delete file if it exists
+if (file.exists(ctl_file)) {file.remove(ctl_file)}
+# END Description
+
+# # Timeval
+# # Do control file
+ write_lines("TIMEVAL;M",ctl_file, append = TRUE)
+ write_lines("variablename;time",ctl_file, append = TRUE)
+# #
+ system(paste(pxjob, " px" , " in=", matrix, ".px", " meta=", ctl_file, " -a", sep=""))
+# 
+# #Delete file if it exists
+ if (file.exists(ctl_file)) {file.remove(ctl_file)}
+# # END Description
+
+# Elimination
+# Do control file
+writeLines("ELIMINATION;languagecode;variablename",ctl_file)
+write_lines("YES;en;subject",ctl_file, append = TRUE)
+write_lines("YES;da;subject",ctl_file, append = TRUE)
+write_lines("YES;kl;subject",ctl_file, append = TRUE)
+
+write_lines("YES;en;language",ctl_file, append = TRUE)
+write_lines("YES;da;language",ctl_file, append = TRUE)
+write_lines("YES;kl;language",ctl_file, append = TRUE)
+#
+system(paste(pxjob, " px" , " in=", matrix, ".px", " meta=", ctl_file, " -a", sep=""))
+
+#Delete file if it exists
+if (file.exists(ctl_file)) {file.remove(ctl_file)}
+# END Elimination
+
+```
+
