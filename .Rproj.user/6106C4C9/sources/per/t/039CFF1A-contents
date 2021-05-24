@@ -13,9 +13,8 @@ setwd("C:/Users/Lars_/OneDrive/Dokumenter/Arbejde/R/SF")
 # NOT needed in this example, as it is based on saved queries, read as .relational_table
 #library("statgl") # Info at www.stat.gl/SBE202003/o1
 #install.packages("devtools")
-library(devtools)
+#library(devtools)
 #devtools::install_github("StatisticsGreenland/statgl")
-devtools::install_github("LarsLap/pxjob64Win")
 
 library(DoPxR)
 

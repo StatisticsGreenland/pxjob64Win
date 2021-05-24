@@ -12,6 +12,6 @@
 
 write.table_with_header <- function(x, file, header, ...){
   cat(header, '\n',  file = file)
-  write.table(x, file, append = T, row.names = FALSE, ...)
+  write.table(x, file, append = T, row.names = FALSE, fileEncoding = TRUE, ...)
 }
 

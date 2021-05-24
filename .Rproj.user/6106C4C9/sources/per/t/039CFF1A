@@ -3,22 +3,23 @@
     "path": "~/Arbejde/R/SF/SF-FI.R",
     "project_path": null,
     "type": "r_source",
-    "hash": "0",
+    "hash": "1511474022",
     "contents": "",
-    "dirty": true,
+    "dirty": false,
     "created": 1610011626519.0,
     "source_on_save": false,
     "relative_order": 9,
     "properties": {
-        "cursorPosition": "33,35",
-        "scrollLine": "18"
+        "cursorPosition": "46,27",
+        "scrollLine": "32",
+        "docOutlineVisible": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1609053262,
+    "lastKnownWriteTime": 1615373354,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1610014125823,
+    "last_content_update": 1615373354,
     "read_only": false,
     "read_only_alternatives": []
 }

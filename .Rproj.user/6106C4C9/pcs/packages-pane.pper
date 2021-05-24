@@ -1,0 +1,7 @@
+{
+    "installOptions": {
+        "installFromRepository": false,
+        "libraryPath": "C:/Users/Lars_/OneDrive/Dokumenter/R/win-library/4.0",
+        "installDependencies": true
+    }
+}
