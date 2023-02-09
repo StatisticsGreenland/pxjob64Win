@@ -5,6 +5,7 @@ Version: 1.0.0
 Author: LarsP
 Maintainer: Lars Pedersen <larp@stat.gl>
 Description: Simplifies installation of PXJob by stat.fi. Only on Windows
-License: 
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.2.3
