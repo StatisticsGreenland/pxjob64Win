@@ -1,7 +1,7 @@
 Package: pxjob64Win
 Type: Package
 Title: Create px-files with PXJob
-Version: 1.0.0
+Version: 1.1.0
 Author: LarsP
 Maintainer: Lars Pedersen <larp@stat.gl>
 Description: Simplifies installation of PXJob by stat.fi. Only on Windows
