@@ -6,6 +6,7 @@ This R-package gives access to 64bit pxjob-functionality, from R, with a minimal
 
 ## Installation
 
+    #install.packages("devtools")
     devtools::install_github("StatisticsGreenland/pxjob64Win")
 
 ## Examples
@@ -15,3 +16,12 @@ This R-package gives access to 64bit pxjob-functionality, from R, with a minimal
     pxjob(input = "input_px_file.px", 
           output = file.path('output', 'parsed_px_file.px)
           )
+
+Advanced use:
+
+    library(pxjob64Win)
+
+    pxjob <- c(system.file(package = "pxjob64Win","PxJob64.exe"))
+
+    system(paste(pxjob, " px" , " in=",tmp_file," out=",matrix,".px",sep=""))
+    system(paste(pxjob, " px" , " in=", matrix, ".px", " meta=", ctl_file, " -a", sep=""))
