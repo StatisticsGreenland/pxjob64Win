@@ -19,9 +19,9 @@ This R-package brings access to 64bit pxjob-functionality, from R, with a minima
 
 Pxedit/Pxjob also offers learning material when instaling/unpacking the files from Statistics Finland. To learn more, read the documentation:
 
-[Documentation: ](PxJob_en_40.rtf)  
-[Tutorial: ]("PxEdit_40_6_PX-Job_en.pdf")  
-[Structural files: What are they?]("PxEdit_40_5_Structural_tables_en.pdf")  
+[Documentation: ](inst/PxJob_en_40.rtf)  
+[Tutorial: ](inst/PxEdit_40_6_PX-Job_en.pdf)  
+[Structural files: What are they?](inst/PxEdit_40_5_Structural_tables_en.pdf)  
 
 Advanced use:
 
