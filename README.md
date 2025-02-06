@@ -1,15 +1,13 @@
-# pxjob64Win (depreciated)
+# pxjob64Win
 
-**Look to pxmake instead. All in R**
+Installing this package installs [PXJob](https://www.stat.fi/tup/tilastotietokannat/px-tuoteperhe_en.html) by Statistics Finland, and makes it accessible from R.
 
-Statistics Finland has created a wonderful, rich and mature tool to create and edit px-files, namely PXEdit. This tool also contains methods to do everything programmatically, named PXJob. Check out <https://www.stat.fi/tup/tilastotietokannat/px-tuoteperhe_en.html>
-
-This R-package brings access to 64bit pxjob-functionality, from R, with a minimal footprint. 
+This package exists, because it is used to run some test cases in [pxmake](https://github.com/StatisticsGreenland/pxmake).
 
 ## Package installation in R
 
-    #install.packages("devtools")
-    devtools::install_github("StatisticsGreenland/pxjob64Win")
+    #install.packages("pak")
+    pak::pak("StatisticsGreenland/pxjob64Win")
 
 ## Example to check validity of a px-file
 
@@ -21,9 +19,9 @@ This R-package brings access to 64bit pxjob-functionality, from R, with a minima
 
 Pxedit/Pxjob also offers learning material when instaling/unpacking the files from Statistics Finland. To learn more, read the documentation:
 
-[Documentation: ](inst/PxJob_en_40.pdf)  
-[Tutorial: ](inst/PxEdit_40_6_PX-Job_en.pdf)  
-[Structural files: What are they?](inst/PxEdit_40_5_Structural_tables_en.pdf)  
+- [Documentation](inst/PxJob_en_40.pdf)  
+- [Tutorial](inst/PxEdit_40_6_PX-Job_en.pdf)  
+- [Structural files: What are they?](inst/PxEdit_40_5_Structural_tables_en.pdf)  
 
 Advanced use:
 
